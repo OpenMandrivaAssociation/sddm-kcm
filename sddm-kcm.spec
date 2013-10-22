@@ -15,6 +15,7 @@ Group: Graphical desktop/KDE
 License: GPLv2
 BuildRequires: pkgconfig(QtCore) pkgconfig(QtGui) pkgconfig(QtDeclarative)
 BuildRequires: pkgconfig(QtDBus)
+BuildRequires: pkgconfig(xcursor)
 BuildRequires: kdelibs4-devel kde4-macros
 Requires: sddm
 
