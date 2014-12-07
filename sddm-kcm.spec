@@ -8,7 +8,7 @@ Release: 0.%date.1
 # Packaged from git for the time being -- no download URL available
 Source0: %{name}-%date.tar.xz
 %else
-Release: 3
+Release: 4
 %endif
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
