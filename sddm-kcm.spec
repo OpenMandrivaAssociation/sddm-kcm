@@ -1,14 +1,16 @@
-%define date 20140523
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define date 0
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version: 0.1
+Version: 5.1.95
 %if %date
-Release: 0.%date.1
+Release: 1.%date.1
 # Packaged from git for the time being -- no download URL available
 Source0: %{name}-%date.tar.xz
 %else
-Release: 4
+Source0: ftp://ftp.kde.org/pub/kde/%{stable}/plasma/%{version}/%{name}-%{version}.tar.xz
+Release: 1
 %endif
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
@@ -23,22 +25,22 @@ Requires: sddm
 Systemsettings module for configuring the SDDM display manager (login screen)
 
 %prep
-%setup -q -n %name-%date
-%cmake_kde4
+%setup -q
+%cmake -DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
+	-G Ninja
 
 %build
-cd build
-%make
+ninja -C build
 
 %install
-cd build
-%makeinstall_std
+DESTDIR="%{buildroot}" ninja -C build install
+%find_lang kcm_sddm
 
-%files
-%{_datadir}/apps/%{name}
+%files -f kcm_sddm.lang
 %{_sysconfdir}/dbus-1/system.d/org.kde.kcontrol.kcmsddm.conf
-%{_libdir}/kde4/kcm_sddm.so
-%{_libdir}/kde4/libexec/kcmsddm_authhelper
+%{_libdir}/qt5/plugins/kcm_sddm.so
+%{_libdir}/libexec/kauth/kcmsddm_authhelper
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmsddm.service
-%{_datadir}/kde4/services/kcm_sddm.desktop
+%{_datadir}/kservices5/kcm_sddm.desktop
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmsddm.policy
+%{_datadir}/sddm-kcm
