@@ -15,10 +15,10 @@ Release: 1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
-BuildRequires: pkgconfig(QtCore) pkgconfig(QtGui) pkgconfig(QtDeclarative)
-BuildRequires: pkgconfig(QtDBus)
+BuildRequires: pkgconfig(Qt5Core) pkgconfig(Qt5Gui) pkgconfig(Qt5Declarative)
+BuildRequires: pkgconfig(Qt5DBus) pkgconfig(Qt5Designer)
 BuildRequires: pkgconfig(xcursor)
-BuildRequires: kdelibs4-devel kde4-macros
+BuildRequires: ninja cmake extra-cmake-modules5
 Requires: sddm
 
 %description
