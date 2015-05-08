@@ -23,6 +23,12 @@ BuildRequires: pkgconfig(Qt5Designer)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: cmake(ECM)
+BuildRequires: cmake(KF5CoreAddons)
+BuildRequires: cmake(KF5I18n)
+BuildRequires: cmake(KF5XmlGui)
+BuildRequires: cmake(KF5Auth)
+BuildRequires: cmake(KF5ConfigWidgets)
+BuildRequires: cmake(KF5KIO)
 Requires: sddm
 
 %description
