@@ -15,8 +15,11 @@ Release: 1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
-BuildRequires: pkgconfig(Qt5Core) pkgconfig(Qt5Gui) pkgconfig(Qt5Declarative)
-BuildRequires: pkgconfig(Qt5DBus) pkgconfig(Qt5Designer)
+BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5Gui)
+BuildRequires: pkgconfig(Qt5Declarative)
+BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: pkgconfig(Qt5Designer)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: cmake(ECM)
 Requires: sddm
