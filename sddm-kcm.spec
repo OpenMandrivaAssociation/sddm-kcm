@@ -20,6 +20,7 @@ BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Declarative)
 BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5Designer)
+BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: cmake(ECM)
 Requires: sddm
