@@ -3,7 +3,7 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version: 5.6.2
+Version: 5.6.3
 %if %date
 Release: 1.%date.1
 # Packaged from git for the time being -- no download URL available
