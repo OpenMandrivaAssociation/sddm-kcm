@@ -3,7 +3,7 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version: 5.6.5
+Version: 5.7.0
 %if %date
 Release: 1.%date.1
 # Packaged from git for the time being -- no download URL available
@@ -46,7 +46,7 @@ Systemsettings module for configuring the SDDM display manager (login screen).
 %install
 %ninja_install -C build
 
-%find_lang kcm_sddm
+%find_lang kcm_sddm || touch kcm_sddm.lang
 
 %files -f kcm_sddm.lang
 %{_sysconfdir}/dbus-1/system.d/org.kde.kcontrol.kcmsddm.conf
