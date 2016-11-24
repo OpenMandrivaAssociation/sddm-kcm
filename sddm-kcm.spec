@@ -3,7 +3,7 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version: 5.8.3
+Version: 5.8.4
 %if %date
 Release: 1.%date.1
 # Packaged from git for the time being -- no download URL available
@@ -18,7 +18,7 @@ License: GPLv2
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5DBus)
-BuildRequires: pkgconfig(Qt5Designer)
+BuildRequires: cmake(Qt5Designer)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Quick)
 BuildRequires: pkgconfig(Qt5QuickWidgets)
