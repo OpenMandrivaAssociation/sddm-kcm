@@ -51,6 +51,8 @@ Systemsettings module for configuring the SDDM display manager (login screen).
 
 %files -f kcm_sddm.lang
 %{_sysconfdir}/dbus-1/system.d/org.kde.kcontrol.kcmsddm.conf
+%{_sysconfdir}/xdg/sddmtheme.knsrc
+%{_bindir}/sddmthemeinstaller
 %{_libdir}/qt5/plugins/kcm_sddm.so
 %{_libdir}/libexec/kauth/kcmsddm_authhelper
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmsddm.service
