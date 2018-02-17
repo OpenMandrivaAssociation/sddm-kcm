@@ -10,7 +10,7 @@ Release: 1.%date.1
 Source0: %{name}-%date.tar.xz
 %else
 Source0: http://download.kde.org/%{stable}/plasma/%{version}/%{name}-%{version}.tar.xz
-Release: 1
+Release: 2
 %endif
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
