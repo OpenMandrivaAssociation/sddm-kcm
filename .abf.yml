@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   sddm-kcm-5.12.3.tar.xz: 3ce4a8edb508da658c0227c5e3debfa124f2bfd5
+sources:
+  sddm-kcm-5.12.6.tar.xz: de90994d8c23b8d7738e646b6afcc798475ed786
