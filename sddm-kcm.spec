@@ -1,17 +1,10 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define date 0
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
 Version: 5.15.3
-%if %date
-Release: 1.%date.1
-# Packaged from git for the time being -- no download URL available
-Source0: %{name}-%date.tar.xz
-%else
 Source0: http://download.kde.org/%{stable}/plasma/%{version}/%{name}-%{version}.tar.xz
-Release: 1
-%endif
+Release: 2
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
