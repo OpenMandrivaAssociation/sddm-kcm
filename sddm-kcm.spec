@@ -2,9 +2,9 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version: 5.16.4
+Version:	5.16.5
 Source0: http://download.kde.org/%{stable}/plasma/%{version}/%{name}-%{version}.tar.xz
-Release: 1
+Release:	1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
