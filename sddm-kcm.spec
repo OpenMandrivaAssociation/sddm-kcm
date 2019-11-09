@@ -4,6 +4,7 @@ Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
 Version:	5.17.2
 Source0: http://download.kde.org/%{stable}/plasma/%{version}/%{name}-%{version}.tar.xz
+Patch0: https://gitweb.frugalware.org/frugalware-current/raw/master/source/plasma/sddm-kcm/dpi-fix.patch
 Release:	1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
@@ -32,7 +33,7 @@ Requires: sddm
 Systemsettings module for configuring the SDDM display manager (login screen).
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
