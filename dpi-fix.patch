@@ -1,7 +1,7 @@
-diff --git a/src/advancedconfig.cpp b/src/advancedconfig.cpp
---- a/src/advancedconfig.cpp
-+++ b/src/advancedconfig.cpp
-@@ -190,7 +190,8 @@
+diff -up sddm-kcm-5.21.0/src/sddmkcm.cpp.omv~ sddm-kcm-5.21.0/src/sddmkcm.cpp
+--- sddm-kcm-5.21.0/src/sddmkcm.cpp.omv~	2021-02-15 00:46:21.137546498 +0100
++++ sddm-kcm-5.21.0/src/sddmkcm.cpp	2021-02-15 00:46:58.086001699 +0100
+@@ -204,7 +204,8 @@ void SddmKcm::synchronizeSettings()
          qDebug() << "Cannot find cursor theme value.";
      }
  
@@ -9,6 +9,5 @@ diff --git a/src/advancedconfig.cpp b/src/advancedconfig.cpp
 +    // minimal possible valid step from Force font DPI setings is 24
 +    if (!dpiValue.isEmpty() && dpiValue.toInt() >= 24) {
          args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = dpiArgument;
-     }
-     else {
-
+     } else {
+         qDebug() << "Cannot find scaling DPI value.";
