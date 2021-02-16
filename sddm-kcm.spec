@@ -27,6 +27,8 @@ BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5NewStuff)
 BuildRequires: cmake(KF5Archive)
+BuildRequires: cmake(KF5Declarative)
+BuildRequires: cmake(KF5KCMUtils)
 Requires: sddm
 
 %description
