@@ -2,10 +2,10 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version:	5.23.5
+Version:	5.24.0
 Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
 Patch0: https://gitweb.frugalware.org/frugalware-current/raw/master/source/plasma/sddm-kcm/dpi-fix.patch
-Release:	2
+Release:	1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
@@ -52,7 +52,7 @@ Systemsettings module for configuring the SDDM display manager (login screen).
 %{_bindir}/sddmthemeinstaller
 %{_libdir}/libexec/kauth/kcmsddm_authhelper
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmsddm.service
-%{_datadir}/kservices5/kcm_sddm.desktop
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmsddm.policy
-%{_libdir}/qt5/plugins/kcms/kcm_sddm.so
 %{_datadir}/kpackage/kcms/kcm_sddm
+%{_libdir}/qt5/plugins/plasma/kcms/systemsettings/kcm_sddm.so
+%{_datadir}/applications/kcm_sddm.desktop
