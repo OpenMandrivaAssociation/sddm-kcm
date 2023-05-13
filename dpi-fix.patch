@@ -1,8 +1,8 @@
-diff -up sddm-kcm-5.21.0/src/sddmkcm.cpp.omv~ sddm-kcm-5.21.0/src/sddmkcm.cpp
---- sddm-kcm-5.21.0/src/sddmkcm.cpp.omv~	2021-02-15 00:46:21.137546498 +0100
-+++ sddm-kcm-5.21.0/src/sddmkcm.cpp	2021-02-15 00:46:58.086001699 +0100
-@@ -204,7 +204,8 @@ void SddmKcm::synchronizeSettings()
-         qDebug() << "Cannot find cursor theme value.";
+diff -up sddm-kcm-5.27.5/src/sddmkcm.cpp.1~ sddm-kcm-5.27.5/src/sddmkcm.cpp
+--- sddm-kcm-5.27.5/src/sddmkcm.cpp.1~	2023-05-13 22:28:59.901755312 +0200
++++ sddm-kcm-5.27.5/src/sddmkcm.cpp	2023-05-13 22:43:10.846680576 +0200
+@@ -199,7 +199,8 @@ void SddmKcm::synchronizeSettings()
+         qDebug() << "Cannot find cursor size value.";
      }
  
 -    if (!dpiValue.isEmpty()) {
