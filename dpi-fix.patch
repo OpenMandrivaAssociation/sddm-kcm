@@ -1,0 +1,13 @@
+diff -up sddm-kcm-5.27.5/src/sddmkcm.cpp.1~ sddm-kcm-5.27.5/src/sddmkcm.cpp
+--- sddm-kcm-5.27.5/src/sddmkcm.cpp.1~	2023-05-13 22:28:59.901755312 +0200
++++ sddm-kcm-5.27.5/src/sddmkcm.cpp	2023-05-13 22:43:10.846680576 +0200
+@@ -199,7 +199,8 @@ void SddmKcm::synchronizeSettings()
+         qDebug() << "Cannot find cursor size value.";
+     }
+ 
+-    if (!dpiValue.isEmpty()) {
++    // minimal possible valid step from Force font DPI setings is 24
++    if (!dpiValue.isEmpty() && dpiValue.toInt() >= 24) {
+         args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = dpiArgument;
+     } else {
+         qDebug() << "Cannot find scaling DPI value.";
