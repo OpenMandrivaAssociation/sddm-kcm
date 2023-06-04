@@ -10,7 +10,7 @@ Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/master/sddm-kcm-master
 Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
 %endif
 Patch0: https://gitweb.frugalware.org/frugalware-current/raw/master/source/plasma/sddm-kcm/dpi-fix.patch
-Release:	1
+Release:	%{?git:0.%{git}.}1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
@@ -42,7 +42,7 @@ BuildRequires: cmake(KF6NewStuff)
 BuildRequires: cmake(KF6Archive)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6KCMUtils)
-Requires: sddm
+Requires: plasma6-sddm
 
 %description
 Systemsettings module for configuring the SDDM display manager (login screen).
