@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230610
+%define git 20230707
 
 Name: plasma6-sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
