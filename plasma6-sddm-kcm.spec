@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230902
+%define git 20230909
 
 Name: plasma6-sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
@@ -68,7 +68,7 @@ Systemsettings module for configuring the SDDM display manager (login screen).
 %{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmsddm.conf
 %{_datadir}/knsrcfiles/sddmtheme.knsrc
 %{_bindir}/sddmthemeinstaller
-%{_libdir}/libexec/kauth/kcmsddm_authhelper
+%{_libdir}/libexec/kf6/kauth/kcmsddm_authhelper
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmsddm.service
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmsddm.policy
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_sddm.so
