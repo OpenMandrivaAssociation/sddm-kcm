@@ -1,13 +1,13 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231104
+%define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
+#define git 20231104
 
 Name: plasma6-sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version:	5.240.0
+Version:	5.27.80
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/master/sddm-kcm-master.tar.bz2#/sddm-kcm-%{git}.tar.bz2
 %else
-Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/sddm-kcm-%{version}.tar.xz
 %endif
 Patch0: https://gitweb.frugalware.org/frugalware-current/raw/master/source/plasma/sddm-kcm/dpi-fix.patch
 Release:	%{?git:0.%{git}.}1
