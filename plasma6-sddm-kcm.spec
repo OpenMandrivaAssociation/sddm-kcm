@@ -42,7 +42,6 @@ BuildRequires: cmake(KF6NewStuff)
 BuildRequires: cmake(KF6Archive)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6KCMUtils)
-BuildRequires: plasma6-xdg-desktop-portal-kde
 Requires: plasma6-sddm
 
 %description
