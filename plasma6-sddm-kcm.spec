@@ -3,7 +3,7 @@
 
 Name: plasma6-sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version:	5.90.0
+Version:	5.91.0
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/master/sddm-kcm-master.tar.bz2#/sddm-kcm-%{git}.tar.bz2
 %else
