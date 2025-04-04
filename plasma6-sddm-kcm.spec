@@ -12,7 +12,7 @@ Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/%{gitbranch}/sddm-kcm-
 Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/sddm-kcm-%{version}.tar.xz
 %endif
 Patch0: https://gitweb.frugalware.org/frugalware-current/raw/%{gitbranchd}/source/plasma/sddm-kcm/dpi-fix.patch
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
