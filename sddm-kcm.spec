@@ -3,7 +3,7 @@
 %define gitbranch Plasma/6.0
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
-Name: plasma6-sddm-kcm
+Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
 Version:	6.3.4
 %if 0%{?git:1}
@@ -12,7 +12,7 @@ Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/%{gitbranch}/sddm-kcm-
 Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/sddm-kcm-%{version}.tar.xz
 %endif
 Patch0: https://gitweb.frugalware.org/frugalware-current/raw/%{gitbranchd}/source/plasma/sddm-kcm/dpi-fix.patch
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
@@ -44,28 +44,18 @@ BuildRequires: cmake(KF6NewStuff)
 BuildRequires: cmake(KF6Archive)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6KCMUtils)
-Requires: plasma6-sddm
+Requires: sddm
+# Renamed after 6.0 2025-05-03
+%rename plasma6-sddm-kcm
+
+BuildSystem: cmake
+BuildOption: -DBUILD_QCH:BOOL=ON
+BuildOption: -DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Systemsettings module for configuring the SDDM display manager (login screen).
 
-%prep
-%autosetup -p1 -n sddm-kcm-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang kcm_sddm || touch kcm_sddm.lang
-
-%files -f kcm_sddm.lang
+%files -f %{name}.lang
 %{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmsddm.conf
 %{_datadir}/knsrcfiles/sddmtheme.knsrc
 %{_bindir}/sddmthemeinstaller
