@@ -5,14 +5,14 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version:	6.3.4
+Version:	6.3.5
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/%{gitbranch}/sddm-kcm-%{gitbranchd}.tar.bz2#/sddm-kcm-%{git}.tar.bz2
 %else
 Source0: http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/sddm-kcm-%{version}.tar.xz
 %endif
 Patch0: https://gitweb.frugalware.org/frugalware-current/raw/%{gitbranchd}/source/plasma/sddm-kcm/dpi-fix.patch
-Release:	%{?git:0.%{git}.}3
+Release:	%{?git:0.%{git}.}1
 URL: https://github.com/sddm-kcm
 Group: Graphical desktop/KDE
 License: GPLv2
