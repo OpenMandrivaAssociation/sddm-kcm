@@ -5,7 +5,7 @@
 
 Name: sddm-kcm
 Summary: Systemsettings module for configuring the SDDM display manager
-Version:	6.5.1
+Version:	6.5.2
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/sddm-kcm/-/archive/%{gitbranch}/sddm-kcm-%{gitbranchd}.tar.bz2#/sddm-kcm-%{git}.tar.bz2
 %else
